@@ -11,15 +11,15 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Document(collection ="user")
-public class User {
+@Document(collection ="product")
+public class Product {
 	@Transient
-    public static final String SEQUENCE_NAME = "User_Sequence";
+    public static final String SEQUENCE_NAME = "Product_Sequence";
 	
 	@Id
-	private long u_Id;
+	private long p_Id;
 	
-	private String firstName;
-    private String lastName;
-    private String emailId;
+	private String productName;
+	private double price;
+	private int qyt;
 }
